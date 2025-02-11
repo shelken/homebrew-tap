@@ -1,8 +1,8 @@
 cask "clashx-meta" do
-  version "1.3.15"
-  sha256 "5d8cc141605875880414419ff57076698f0b363b52eaa79ff7b0d8658def0378"
+  version "1.4.9"
+  sha256 "60183390af3f323a3c5976524a4d2cd7b5b2e02ed92fe75de7cb3098a2960dd4"
 
-  url "https://github.com/MetaCubeX/ClashX.Meta/releases/download/v#{version}/ClashX.Meta.macOS.12.0+.zip"
+  url "https://github.com/MetaCubeX/ClashX.Meta/releases/download/v#{version}/ClashX.Meta.zip"
   name "ClashX Meta"
   desc "Rule-based custom proxy with GUI based on Clash.Meta"
   homepage "https://github.com/MetaCubeX/ClashX.Meta"
