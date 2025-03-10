@@ -14,6 +14,7 @@ cask "typeswitch" do
 zap trash: [
     "~/Library/Application Support/TypeSwitch",
     "~/Library/Preferences/top.ygsgdbd.TypeSwitch.plist",
+    "~/Library/Preferences/group.top.ygsgdbd.TypeSwitch.plist",
     "~/Library/Caches/top.ygsgdbd.TypeSwitch"
   ]
 end
