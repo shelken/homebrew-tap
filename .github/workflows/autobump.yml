@@ -33,3 +33,4 @@ jobs:
           casks: >
             clashx-meta
             typeswitch
+            fl-clash
