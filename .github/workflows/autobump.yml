@@ -1,0 +1,35 @@
+name: Auto Bump
+
+on:
+  schedule:
+    # Run every hour.
+    - cron: "0 * * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/autobump.yml'
+  pull_request:
+    paths:
+      - '.github/workflows/autobump.yml'
+
+jobs:
+  bump:
+    if: github.event.repository.fork == false
+    runs-on: macos-latest
+    permissions: write-all
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@master
+      - name: Set up Git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+      - uses: Homebrew/actions/bump-packages@master
+        continue-on-error: true
+        with:
+          fork: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          casks: >
+            clashx-meta
+            typeswitch
