@@ -4,7 +4,7 @@ cask "typeswitch" do
 
   url "https://github.com/ygsgdbd/TypeSwitch/releases/download/v#{version}/TypeSwitch.dmg"
   name "TypeSwitch"
-  desc "A tool to quickly switch between different input sources on macOS"
+  desc "Tool to quickly switch between different input sources"
   homepage "https://github.com/ygsgdbd/TypeSwitch"
 
   depends_on macos: ">= :ventura"
@@ -15,6 +15,6 @@ cask "typeswitch" do
     "~/Library/Application Support/TypeSwitch",
     "~/Library/Caches/top.ygsgdbd.TypeSwitch",
     "~/Library/Preferences/group.top.ygsgdbd.TypeSwitch.plist",
-    "~/Library/Preferences/top.ygsgdbd.TypeSwitch.plist"
+    "~/Library/Preferences/top.ygsgdbd.TypeSwitch.plist",
   ]
 end

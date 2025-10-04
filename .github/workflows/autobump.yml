@@ -20,12 +20,12 @@ jobs:
     runs-on: macos-latest
     permissions: write-all
     steps:
-      - uses: Homebrew/actions/setup-homebrew@master
+      - uses: Homebrew/actions/setup-homebrew@main
       - name: Set up Git
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-      - uses: Homebrew/actions/bump-packages@master
+      - uses: Homebrew/actions/bump-packages@main
         continue-on-error: true
         with:
           fork: false
