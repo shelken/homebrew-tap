@@ -16,7 +16,7 @@ cask "clashx-meta" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :monterey"
 
   app "ClashX Meta.app"
 

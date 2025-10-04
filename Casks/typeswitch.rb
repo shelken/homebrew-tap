@@ -11,10 +11,10 @@ cask "typeswitch" do
 
   app "TypeSwitch.app"
 
-zap trash: [
+  zap trash: [
     "~/Library/Application Support/TypeSwitch",
-    "~/Library/Preferences/top.ygsgdbd.TypeSwitch.plist",
+    "~/Library/Caches/top.ygsgdbd.TypeSwitch",
     "~/Library/Preferences/group.top.ygsgdbd.TypeSwitch.plist",
-    "~/Library/Caches/top.ygsgdbd.TypeSwitch"
+    "~/Library/Preferences/top.ygsgdbd.TypeSwitch.plist"
   ]
 end
