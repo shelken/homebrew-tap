@@ -4,17 +4,23 @@ cask "typeswitch" do
 
   url "https://github.com/ygsgdbd/TypeSwitch/releases/download/v#{version}/TypeSwitch.dmg"
   name "TypeSwitch"
-  desc "Tool to quickly switch between different input sources"
   homepage "https://github.com/ygsgdbd/TypeSwitch"
 
+  auto_updates false
   depends_on macos: ">= :ventura"
 
   app "TypeSwitch.app"
 
+  caveats <<~EOS
+    TypeSwitch is currently unsigned. You'll need to:
+    1. Right-click the app and select "Open"
+    2. Click "Open" in the dialog that appears
+    3. Go to System Settings > Privacy & Security and approve the app
+  EOS
+
   zap trash: [
     "~/Library/Application Support/TypeSwitch",
     "~/Library/Caches/top.ygsgdbd.TypeSwitch",
-    "~/Library/Preferences/group.top.ygsgdbd.TypeSwitch.plist",
     "~/Library/Preferences/top.ygsgdbd.TypeSwitch.plist",
   ]
 end
