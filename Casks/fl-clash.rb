@@ -16,7 +16,7 @@ cask "fl-clash" do
   desc "Multi-platform proxy client based on ClashMeta"
   homepage "https://github.com/chen08209/FlClash"
 
-  auto_updates true
+  auto_updates false
 
   app "FlClash.app"
 end
