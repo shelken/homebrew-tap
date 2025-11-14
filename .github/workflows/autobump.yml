@@ -34,5 +34,5 @@ jobs:
           casks: >
             clashx-meta
             fl-clash
-            loon4mac
+            loon
             typeswitch
