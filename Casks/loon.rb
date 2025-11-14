@@ -12,8 +12,12 @@ cask "loon" do
 
   livecheck do
     url "https://github.com/Loon0x00/Loon4Mac/releases/latest"
-    regex(%r{href=.*?/tag/v?([^"' >]+)["' >]}i)
-    strategy :page_match
+    regex(%r{href=.*?/tag/(\d+\.\d+)\((\d+)\)["' >]}i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+      "#{match[1]}.#{match[2]}"
+    end
   end
 
   auto_updates false
