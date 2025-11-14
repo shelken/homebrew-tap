@@ -4,12 +4,25 @@ cask "typeswitch" do
 
   url "https://github.com/ygsgdbd/TypeSwitch/releases/download/v#{version}/TypeSwitch.dmg"
   name "TypeSwitch"
+  desc "快速切换输入法的工具"
   homepage "https://github.com/ygsgdbd/TypeSwitch"
+
+  livecheck do
+    url "https://api.github.com/repos/ygsgdbd/TypeSwitch/releases/latest"
+    strategy :json do |json|
+      json["tag_name"]&.gsub(/^v/, "")
+    end
+  end
 
   auto_updates false
   depends_on macos: ">= :ventura"
 
   app "TypeSwitch.app"
+
+  zap trash: [
+    "~/Library/Preferences/group.top.ygsgdbd.TypeSwitch.plist",
+    "~/Library/Preferences/top.ygsgdbd.TypeSwitch.plist",
+  ]
 
   caveats <<~EOS
     TypeSwitch is currently unsigned. You'll need to:
@@ -17,10 +30,4 @@ cask "typeswitch" do
     2. Click "Open" in the dialog that appears
     3. Go to System Settings > Privacy & Security and approve the app
   EOS
-
-  zap trash: [
-    "~/Library/Application Support/TypeSwitch",
-    "~/Library/Caches/top.ygsgdbd.TypeSwitch",
-    "~/Library/Preferences/top.ygsgdbd.TypeSwitch.plist",
-  ]
 end

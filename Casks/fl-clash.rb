@@ -16,7 +16,20 @@ cask "fl-clash" do
   desc "Multi-platform proxy client based on ClashMeta"
   homepage "https://github.com/chen08209/FlClash"
 
+  livecheck do
+    url "https://api.github.com/repos/chen08209/FlClash/releases/latest"
+    strategy :json do |json|
+      json["tag_name"]&.gsub(/^v/, "")
+    end
+  end
+
   auto_updates false
 
   app "FlClash.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.follow.clash",
+    "~/Library/Caches/com.follow.clash",
+    "~/Library/Preferences/com.follow.clash.plist",
+  ]
 end
