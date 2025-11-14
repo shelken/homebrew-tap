@@ -10,7 +10,7 @@ on:
       - main
     paths:
       - ".github/workflows/autobump.yml"
-      - "Casks/"
+      - "Casks/**"
   pull_request:
     paths:
       - ".github/workflows/autobump.yml"
