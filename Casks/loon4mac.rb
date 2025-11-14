@@ -11,10 +11,9 @@ cask "loon" do
   homepage "https://github.com/Loon0x00/Loon4Mac"
 
   livecheck do
-    url "https://api.github.com/repos/Loon0x00/Loon4Mac/releases/latest"
-    strategy :json do |json|
-      json["tag_name"]
-    end
+    url "https://github.com/Loon0x00/Loon4Mac/releases/latest"
+    regex(%r{href=.*?/tag/v?([^"' >]+)["' >]}i)
+    strategy :page_match
   end
 
   auto_updates false

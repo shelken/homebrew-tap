@@ -8,10 +8,9 @@ cask "typeswitch" do
   homepage "https://github.com/ygsgdbd/TypeSwitch"
 
   livecheck do
-    url "https://api.github.com/repos/ygsgdbd/TypeSwitch/releases/latest"
-    strategy :json do |json|
-      json["tag_name"]&.gsub(/^v/, "")
-    end
+    url "https://github.com/ygsgdbd/TypeSwitch/releases/latest"
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :page_match
   end
 
   auto_updates false

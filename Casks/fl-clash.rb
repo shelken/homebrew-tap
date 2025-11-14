@@ -17,10 +17,9 @@ cask "fl-clash" do
   homepage "https://github.com/chen08209/FlClash"
 
   livecheck do
-    url "https://api.github.com/repos/chen08209/FlClash/releases/latest"
-    strategy :json do |json|
-      json["tag_name"]&.gsub(/^v/, "")
-    end
+    url "https://github.com/chen08209/FlClash/releases/latest"
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :page_match
   end
 
   auto_updates false
