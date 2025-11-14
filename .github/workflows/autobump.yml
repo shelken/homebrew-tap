@@ -26,7 +26,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
       - uses: Homebrew/actions/bump-packages@main
-        continue-on-error: true
+        continue-on-error: false
         with:
           fork: false
           token: ${{ secrets.GITHUB_TOKEN }}
