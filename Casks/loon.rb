@@ -1,6 +1,6 @@
 cask "loon" do
-  version "0.1.29"
-  sha256 "31eee8a2a12059c0ddc8319b51ccd1c2ed668d6b09c662fb3199bb5cb809ac54"
+  version "0.1.32"
+  sha256 "ec72da283862d27676e9147a581767c66f9fc3e2a4e3a054fd66898384c490bc"
 
   # 从版本号中提取 alpha 版本号
   alpha_version = version.split(".").last
@@ -16,12 +16,12 @@ cask "loon" do
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
+
       "#{match[1]}.#{match[2]}"
     end
   end
 
   auto_updates false
-
   depends_on macos: ">= :monterey"
 
   app "Loon.app"
