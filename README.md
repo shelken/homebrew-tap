@@ -10,3 +10,4 @@
 | `typeswitch`  | 一款快速切换输入法的工具。 | [ygsgdbd/TypeSwitch](https://github.com/ygsgdbd/TypeSwitch)   |
 | `fl-clash`    | 基于 ClashMeta 的多平台代理客户端。        | [chen08209/FlClash](https://github.com/chen08209/FlClash)     |
 | `loon`        | 网络工具。                                  | [Loon0x00/Loon4Mac](https://github.com/Loon0x00/Loon4Mac)     |
+| `input-source-pro-beta` | 自动切换输入法的工具 (Beta 版)，支持外部 JSON 配置 | [shelken/InputSourcePro](https://github.com/shelken/InputSourcePro) |
