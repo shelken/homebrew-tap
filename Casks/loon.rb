@@ -1,6 +1,6 @@
 cask "loon" do
-  version "0.1.40"
-  sha256 "2b4bfc5fecb1e3408c63d02f1f347c5a0d21398108614525421d2aed4c5dc941"
+  version "0.1.42"
+  sha256 "7f440194855e1a60e3c523e94d697997a5420389a2d8252f3e0ee1d611a44a3e"
 
   # 从版本号中提取 alpha 版本号
   alpha_version = version.split(".").last
