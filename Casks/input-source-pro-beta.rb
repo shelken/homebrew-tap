@@ -1,6 +1,6 @@
 cask "input-source-pro-beta" do
-  version "0.1.0"
-  sha256 "26c73ed6d99ab25a5d46666f7f66a5bb58a49dea72ab45cf70c2416cfd409bad"
+  version "2.7.0"
+  sha256 "a19bcad9c22deedba4c693737554effee2d366dbb055aeeb870dc6319a6b81ec"
 
   url "https://github.com/shelken/InputSourcePro/releases/download/v#{version}/Input-Source-Pro-Beta-v#{version}.dmg"
   name "Input Source Pro Beta"
