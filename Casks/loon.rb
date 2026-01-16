@@ -19,7 +19,7 @@ cask "loon" do
   end
 
   auto_updates false
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Loon.app"
 
