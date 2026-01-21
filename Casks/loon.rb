@@ -1,8 +1,8 @@
 cask "loon" do
-  version "0.2.0.52"
-  sha256 "6af132eaa406e68764d1c1bb6065609c40805d784f8602f74815ed539bd8af2f"
+  version "0.2.0.57"
+  sha256 "b36bc66fddf3e11e63bdac014f2eec903c5cc060a7e82a3867ba914ddad92ad0"
 
-  url "https://github.com/Loon0x00/Loon4Mac/releases/download/#{version.major_minor_patch}(#{version.split('.').last})/Loon-#{version.major_minor_patch}-beta-#{version.split('.').last}.dmg"
+  url "https://github.com/Loon0x00/Loon4Mac/releases/download/#{version.major_minor_patch}(#{version.split(".").last})/Loon-#{version.major_minor_patch}-beta-#{version.split(".").last}.dmg"
   name "Loon"
   desc "Network tool"
   homepage "https://github.com/Loon0x00/Loon4Mac"
