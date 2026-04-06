@@ -31,7 +31,6 @@ jobs:
           fork: false
           token: ${{ secrets.GITHUB_TOKEN }}
           casks: >
-            clashx-meta
             fl-clash
             loon
             typeswitch
