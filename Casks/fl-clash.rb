@@ -1,13 +1,13 @@
 cask "fl-clash" do
-  version "0.8.92"
+  version "0.8.93"
 
   on_arm do
-    sha256 "b2f766927b496b1507323f660999a414e6ab78407693eacbabc2f9fad233469f"
+    sha256 "f342afda8b9441000695133851625c961537d23a47fb897cb8a372bfb6439c2c"
 
     url "https://github.com/chen08209/FlClash/releases/download/v#{version}/FlClash-#{version}-macos-arm64.dmg"
   end
   on_intel do
-    sha256 "e087b913cabb0f81bf374cb50ff98824fcedc125fffd881fcc60ed6f2336eab9"
+    sha256 "81a1b73b59d9fc21a2084db994733ee6df16ea2f0629df945b1e80418cb76036"
 
     url "https://github.com/chen08209/FlClash/releases/download/v#{version}/FlClash-#{version}-macos-amd64.dmg"
   end
@@ -23,7 +23,7 @@ cask "fl-clash" do
   end
 
   auto_updates false
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "FlClash.app"
 
