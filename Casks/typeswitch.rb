@@ -1,8 +1,8 @@
 cask "typeswitch" do
-  version "0.4"
-  sha256 "51a396a75708b745411c5d008b02bed793631f1b2f4ef5aab6fe1407b9eff8bb"
+  version "0.5.2"
+  sha256 "dcd914352c489c37202ac057f6ee4aed5bb20c652c93b1d0b478dce5d3462f1d"
 
-  url "https://github.com/ygsgdbd/TypeSwitch/releases/download/v#{version}/TypeSwitch.dmg"
+  url "https://github.com/ygsgdbd/TypeSwitch/releases/download/v#{version}/TypeSwitch-macOS-universal.zip"
   name "TypeSwitch"
   desc "快速切换输入法的工具"
   homepage "https://github.com/ygsgdbd/TypeSwitch"
