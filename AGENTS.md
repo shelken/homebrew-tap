@@ -6,6 +6,7 @@
   curl -s "https://api.github.com/repos/{owner}/{repo}/releases/latest" | jq '.assets[0].digest'
   # 返回格式: "sha256:xxxxxx"
   ```
+- GitHub release assets 可能被作者替换成同 tag 不同文件（作者重新打包），导致 checksum 不匹配。更新 cask 时，必须重新下载实际文件并验证 checksum，不要沿用旧值
 
 ## 仓库概述
 
