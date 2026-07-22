@@ -1,6 +1,6 @@
 cask "typeswitch" do
-  version "0.7.1"
-  sha256 "1bf8b48eeb9fd48dbecf341280180e4a5b8c7f912d9f06e86ead8b36bc6fcf48"
+  version "0.9.0"
+  sha256 "a44df31d8dd3188daf57cc82205bc7bc2756b68eb39a4e384906e5019d86ed18"
 
   url "https://github.com/ygsgdbd/TypeSwitch/releases/download/v#{version}/TypeSwitch-macOS-universal.zip"
   name "TypeSwitch"
