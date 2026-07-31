@@ -14,15 +14,17 @@
 
 ## 常用命令
 
+开发仓与 Homebrew tap 目录是两个独立 clone；`brew audit` / `livecheck` / `info` / `style` 只认 tap 内文件，且必须用 **tap token**，不能传 `Casks/*.rb` 路径（详见 `postmortems/002`）。
+
 ```bash
 # 校验 cask 定义是否符合规范
-brew audit --cask Casks/<cask-name>.rb
+brew audit --cask shelken/tap/<cask-name>
 
 # 测试安装某个 cask
-brew install --cask ./Casks/<cask-name>.rb
+brew install --cask shelken/tap/<cask-name>
 
 # 检查 cask 是否有新版本（livecheck）
-brew livecheck --cask Casks/<cask-name>.rb
+HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_FROM_API=1 brew livecheck shelken/tap/<cask-name>
 
 # 计算下载文件的 SHA256（使用 justfile 辅助命令）
 just prefetch-url '<download-url>'
@@ -45,3 +47,13 @@ just prefetch-url '<download-url>'
 2. 下载新版本并计算 SHA256
 3. 更新 `sha256`（架构特定的 cask 需更新两个值）
 4. 使用 `brew audit` 和 `brew install` 测试
+
+## Versioned 回退 cask
+
+主 cask 始终跟最新；需要固定旧版回退时，新增独立 `Casks/<name>@<version>.rb`，与主 cask 共存。
+
+- token / 文件名：`<name>@<完整版本>`（例：`loon@0.2.0.61`）
+- 旧定义优先从 git 历史取，不要重写：`git log -S '<version>' -- Casks/<name>.rb` → `git show <commit>:Casks/<name>.rb`
+- `livecheck do skip "Pinned version for rollback" end`（锁死版本，不跟新）
+- `conflicts_with cask: "<主cask>"`（与主 cask 互斥安装同一 `.app`）
+- **不要**写入 `autobump.yml`
