@@ -15,9 +15,8 @@ cask "tinycast" do
 
   auto_updates true
   conflicts_with cask: [
-    "abue-ammar/tinycast/tinycast",
-    "abue-ammar/tinycast/tinycast-universal",
-    "abue-ammar/tinycast/tinycast-sequoia",
+    "tinycast-universal",
+    "tinycast-sequoia",
   ]
   depends_on macos: :tahoe
   depends_on arch: :arm64
