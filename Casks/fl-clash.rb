@@ -23,7 +23,7 @@ cask "fl-clash" do
   end
 
   auto_updates false
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "FlClash.app"
 
