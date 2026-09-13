@@ -1,6 +1,6 @@
 cask "tinycast" do
-  version "0.10.15"
-  sha256 "5617061818a2cba2088467556a4acf81d947e5ad203225ee6748d6e26ab2b449"
+  version "0.10.20"
+  sha256 "5b1e970ff76c20e3f195a3dded6c4a6a67640a510ab136f1d63200a5e28635c5"
 
   url "https://github.com/shelken/tinycast/releases/download/v#{version}/Tinycast-#{version}.dmg"
   name "Tinycast"
@@ -18,8 +18,8 @@ cask "tinycast" do
     "tinycast-sequoia",
     "tinycast-universal",
   ]
-  depends_on macos: :tahoe
   depends_on arch: :arm64
+  depends_on macos: :tahoe
 
   app "Tinycast.app"
 
