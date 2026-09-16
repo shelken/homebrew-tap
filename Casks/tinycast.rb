@@ -23,20 +23,8 @@ cask "tinycast" do
 
   app "Tinycast.app"
 
-  preflight_steps do
-    if_path_exists "Tinycast.app", base: :appdir do
-      touch ".upgrade"
-    end
-  end
-
   postflight_steps do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Tinycast.app"]
-
-    unless_path_exists ".upgrade" do
-      run "/usr/bin/open", args: ["-g", "{{appdir}}/Tinycast.app"]
-    end
-
-    remove ".upgrade"
   end
 
   uninstall quit: "com.tinycast.app"
