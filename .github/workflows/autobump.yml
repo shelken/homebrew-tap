@@ -31,8 +31,6 @@ jobs:
           fork: false
           token: ${{ secrets.GITHUB_TOKEN }}
           casks: >
-            fl-clash
             loon
             typeswitch
-            input-source-pro-beta
             tinycast
