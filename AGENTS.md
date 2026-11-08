@@ -37,7 +37,6 @@ just prefetch-url '<download-url>'
 - `url`：下载地址，通常使用版本号插值
 - `livecheck`：通过正则匹配 GitHub releases 页面检测新版本
 - `app`：指定要安装的 .app 包名称
-- 可选：`on_arm`/`on_intel` 块用于区分 ARM/Intel 架构的下载（参考 `fl-clash.rb`）
 - 可选：`uninstall` 清理辅助程序，`zap` 清理用户数据，`caveats` 显示用户提示
 
 ## 版本更新流程
