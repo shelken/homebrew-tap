@@ -8,7 +8,8 @@ cask "tinycast" do
   homepage "https://github.com/shelken/tinycast"
 
   livecheck do
-    url "https://github.com/abue-ammar/tinycast/releases/latest"
+    # 指 fork 自己的 release：上游先发而 fork 未同步时，fork 上没有对应 DMG，避免 bump 到 404
+    url "https://github.com/shelken/tinycast/releases/latest"
     regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
     strategy :page_match
   end

@@ -34,3 +34,18 @@ jobs:
             loon
             typeswitch
             tinycast
+      # 无分支保护，直接合并；bump PR 由 bot 生成且 checksum 经过校验，无人工审核价值
+      - name: 合并 bot 开出的 bump PR
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          prs="$(gh pr list --author app/github-actions --state open --json number --jq '.[].number')"
+          if [ -z "$prs" ]; then
+            echo "没有待合并的 bump PR"
+            exit 0
+          fi
+          for pr in $prs; do
+            echo "合并 #$pr"
+            gh pr merge "$pr" --squash --delete-branch || echo "::warning::合并 #$pr 失败，需要人工处理"
+          done
