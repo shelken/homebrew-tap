@@ -1,6 +1,6 @@
 cask "tinycast" do
-  version "0.10.20"
-  sha256 "5b1e970ff76c20e3f195a3dded6c4a6a67640a510ab136f1d63200a5e28635c5"
+  version "0.12.11"
+  sha256 "e246f82cf002f9235732fc4065222e8c59fbf05931d880c48672cf4f2dacc6eb"
 
   url "https://github.com/shelken/tinycast/releases/download/v#{version}/Tinycast-#{version}.dmg"
   name "Tinycast"
