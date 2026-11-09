@@ -1,6 +1,6 @@
 cask "loon" do
-  version "0.4.0.81"
-  sha256 "059a63585d79fd1283771eac5032fe96bc6e451487f97ecb9299245d4bba6ddb"
+  version "0.5.0.1011"
+  sha256 "5dba952ca182099c17cd8230f97ba7d4894453d7f279b588577113b37b0740b1"
 
   url "https://github.com/Loon0x00/Loon4Mac/releases/download/#{version.major_minor_patch}(#{version.split(".").last})/Loon-#{version.major_minor_patch}-beta-#{version.split(".").last}.dmg"
   name "Loon"
